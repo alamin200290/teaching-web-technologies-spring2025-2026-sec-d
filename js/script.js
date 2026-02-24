@@ -41,6 +41,8 @@
             //alert(name);
             //document.write('test js script....');
 
+            let btn = document.getElementById('btn');
+            btn.addEventListener('click', test);
             function test(){
                 let head = document.getElementsByTagName('h1')[0];
                 let username = document.getElementById('username');
