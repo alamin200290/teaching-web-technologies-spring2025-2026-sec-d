@@ -16,7 +16,14 @@
     }
 
     function addUser($user){
+        $con = getConnection();
+        $sql = "insert into users value(null, '{$user['username']}', '{$user['password']}', '{$user['email']}')";
 
+        if(mysqli_query($con, $sql)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     function deleteUser($id){

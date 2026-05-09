@@ -2,9 +2,10 @@
     session_start();
     require_once('../model/userModel.php');
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['login_submit']) && isset($_POST['login_form'])){
         $username = $_REQUEST['username'];
         $password = $_REQUEST['password'];
+        $form_name = $_REQUEST['login_form'];
 
         if($username == "" || $password == ""){
                 echo "null username/password!";
